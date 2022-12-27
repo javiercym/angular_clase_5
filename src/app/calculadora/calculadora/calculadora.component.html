@@ -4,7 +4,7 @@
 
     <div class="calculadora">
 
-        <input type="text" class="form-control" [(ngModel)]="pantalla" disabled>
+        <!-- <input type="text" class="form-control" [(ngModel)]="pantalla" disabled> -->
 
         <button type="button" class="btn btn-outline-secondary" (click)="anadirNumero('7')">7</button>
         <button type="button" class="btn btn-outline-secondary" (click)="anadirNumero('8')">8</button>
@@ -21,6 +21,7 @@
         <button type="button" class="btn btn-outline-secondary" (click)="anadirNumero('0')">0</button>
         <button type="button" class="btn btn-outline-secondary" (click)="operar('-')">-</button>
         <br>
+        <button type="button" class="btn btn-outline-secondary" (click)="operar('+')">+</button>
         <button type="button" class="btn btn-outline-secondary" (click)="borrarPantalla()">C</button>
         <button type="button" class="btn btn-outline-secondary" (click)="calcular()">Calcular</button>
     </div>

@@ -20,6 +20,7 @@ export class CalculadoraComponent {
     this.operando1 = 0;
     this.operando2 = 0;
     this.operacion = '';
+    this.cambiarNomnbre.emit(this.pantalla)
   }
 
   anadirNumero(numero: string) {

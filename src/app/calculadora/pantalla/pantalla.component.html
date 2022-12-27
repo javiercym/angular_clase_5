@@ -1,4 +1,7 @@
 <div class="container">
-    {{resultado}}
-    <app-calculadora (cambiarNomnbre)="resultado = $event"></app-calculadora>
+    <div class="cal">
+        <div ><input type="text" class="form-control" placeholder="{{resultado}}" disabled></div>
+        <p></p>
+        <app-calculadora (cambiarNomnbre)="resultado = $event"></app-calculadora>
+    </div>
 </div>
