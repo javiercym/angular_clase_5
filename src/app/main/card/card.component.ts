@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+  contador = 0
 
+  subir() {
+    this.contador = this.contador+1;
+  }
+  reducir() {
+    this.contador = this.contador-1;
+  }
 }

@@ -1,0 +1,15 @@
+.mid{
+    padding: 20px 300px;
+}
+.titulo{
+    font-size: 20px;
+    text-align: center;
+}
+.contador{
+    font-size: 800px;
+    text-align: center;
+    height: 150px;
+}
+.botones{
+    margin-bottom: 20px;
+}

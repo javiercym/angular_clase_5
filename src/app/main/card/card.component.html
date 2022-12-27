@@ -1,1 +1,15 @@
-<p>card works!</p>
+<div class="mid">
+    <div class="card">
+        <span class="titulo">Conteo</span>
+        <span class="contador">{{contador}}</span>
+
+        <div class="row text-center botones">
+            <div class="col-6">
+                <button type="button" class="btn btn-success" (click)="subir()">+ Incremento</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-danger" (click)="reducir()">- Decremento</button>
+            </div>
+        </div>
+    </div>
+</div>
