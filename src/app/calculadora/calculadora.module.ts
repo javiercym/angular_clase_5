@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,11 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
     CalculadoraComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
+  ],
+  exports: [
+    CalculadoraComponent
   ]
 })
 export class CalculadoraModule { }
