@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-calculadora',
@@ -6,8 +6,10 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./calculadora.component.css']
 })
 export class CalculadoraComponent {
-  
+
   pantalla = '0';
+  @Output() cambiarNomnbre = new EventEmitter<string>();
+
   operando1!: number;
   operando2!: number;
   operacion!: string;
@@ -23,14 +25,17 @@ export class CalculadoraComponent {
   anadirNumero(numero: string) {
     if (this.pantalla === '0') {
       this.pantalla = numero;
+      this.cambiarNomnbre.emit(this.pantalla)
     } else {
       this.pantalla += numero;
+      this.cambiarNomnbre.emit(this.pantalla)
     }
   }
 
   anadirPunto() {
     if (this.pantalla.indexOf('.') === -1) {
       this.pantalla += '.';
+      this.cambiarNomnbre.emit(this.pantalla)
     }
   }
 
@@ -38,6 +43,7 @@ export class CalculadoraComponent {
     this.operando1 = Number(this.pantalla);
     this.operacion = operacion;
     this.pantalla = '0';
+    this.cambiarNomnbre.emit(this.pantalla)
   }
 
   calcular() {
@@ -58,6 +64,8 @@ export class CalculadoraComponent {
         break;
     }
     this.pantalla = String(resultado);
+    
+    this.cambiarNomnbre.emit(this.pantalla)
   }
 
 }
